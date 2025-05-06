@@ -5,6 +5,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { IKImage } from 'imagekitio-react';
 import Image from './image';
+import { Link, Links } from 'react-router-dom';
+import { SignedOut , SignInButton, SignOutButton , SignedIn , UserButton  } from '@clerk/clerk-react';
 
 function OffcanvasExample() {
   return (
@@ -13,13 +15,7 @@ function OffcanvasExample() {
         <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3 w-100 h-25">
           <Container fluid >
             <Navbar.Brand href="#">
-           
-                {/* <IKImage urlEndpoint='https://ik.imagekit.io/alilia1212/' path='/layers-icon-on-white-background-free-vector.jpg' style={{
-                  width : '40px',
-                  height : "40px"
-                }} /> */}
-
-                <Image />
+               <Image />
                <span>Blog</span>
                 </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -37,15 +33,20 @@ function OffcanvasExample() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-center flex-grow-1 pe-5 gap-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">Trending</Nav.Link>
-                  <Nav.Link href='#action3'>Most Popular</Nav.Link>
-                  <Nav.Link href='#action4'>About</Nav.Link>
+                  <Link href="#action1" to="/">Home</Link>
+                  <Link  href="#action2" to="/">Trending</Link>
+                  <Link href='#action3' to="/">Most Popular</Link>
+                  <Link href='#action4' to="/">About</Link>
                   
                 </Nav>
-                <Nav>
-                   <Button variant="info">LogIn</Button>
-                </Nav>
+                <SignedOut>
+                   <Link to='/Login'>   
+                     <button>LogIn</button>                 
+                   </Link>
+                </SignedOut>
+                <SignedIn>
+                <UserButton />
+                </SignedIn>
              
               </Offcanvas.Body>
             </Navbar.Offcanvas>
