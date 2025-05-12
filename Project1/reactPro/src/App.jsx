@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import OffcanvasExample from './components/Navbar'
+import MainCatigories from './components/MainCatigories';
 
 
 
@@ -12,6 +13,7 @@ function App() {
      {/* <badcrumbs /> */}
      {/* <introduction /> */}
      {/* <featured Posta />  */}
+     
      {/* <posts List /> */}
     </>
   )

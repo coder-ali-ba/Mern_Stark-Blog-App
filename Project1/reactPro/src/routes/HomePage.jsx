@@ -1,5 +1,11 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from "react-router-dom"
+import Spinner from 'react-bootstrap/Spinner';
+import "../App.css"
+import MainCatigories from '../components/MainCatigories';
+import Featuredposts from '../components/Featuredposts';
+
+
 const HomePage = () => {
  return(
         
@@ -21,11 +27,11 @@ const HomePage = () => {
         </div>
 
 
-        <Link to="write" className='position-relative '>
+        <Link to="write" className='position-relative' >
                <svg 
                viewBox='0 0 200 200' 
                width="200" height="200" 
-               className='tracking-widest ' 
+               className='tracking-widest spinner' 
                role='status'>
                      <path 
                      fill='none' 
@@ -34,7 +40,7 @@ const HomePage = () => {
                      />
             
                        <text>
-                         <textPath href='#circlePath' startOffset="0%">Write Your Story</textPath>
+                         <textPath href='#circlePath' className='' startOffset="0%">Write Your Story</textPath>
                          <textPath href='#circlePath' startOffset="50%">Share Your Idea</textPath>
                        </text>      
                </svg>
@@ -69,7 +75,8 @@ const HomePage = () => {
         </Link>
      </div>
 
-
+  <MainCatigories />
+  <Featuredposts />
     </div>
   )
 }

@@ -1,0 +1,23 @@
+.spinner {
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media(max-width:600px){
+.spinner{
+    display: none;
+}
+.category{
+    display: none;
+}
+}
+
+.link:hover{
+  background-color: darkgray;
+}
