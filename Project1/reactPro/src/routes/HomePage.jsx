@@ -4,6 +4,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import "../App.css"
 import MainCatigories from '../components/MainCatigories';
 import Featuredposts from '../components/Featuredposts';
+import PostsLists from '../components/PostsLists';
 
 
 const HomePage = () => {
@@ -77,7 +78,16 @@ const HomePage = () => {
 
   <MainCatigories />
   <Featuredposts />
-    </div>
+
+  {/* POstsLists */}
+  <div className="">
+    <h1 className="my-8 text-dark">Recent Posts</h1>
+   <PostsLists />
+  </div>
+
+
+
+</div>
   )
 }
 
