@@ -12,7 +12,15 @@ const Image = ({}) => {
        loading='lazy'
        lqip={{ active: true, quality: 20 }}
        alt={"#"}
-    
+    //    width={w}
+    //    height={h}
+    //    transformation={[
+    //     {
+    //         width :w,
+    //         height : h
+    //     }
+
+    //    ]}
         />
     )
 }
